@@ -1,32 +1,38 @@
 {
-  "name": "personalized-learning-roadmap-builder",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "name": "roadmap-app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "ejs": "^3.1.10",
-    "express": "^4.21.2",
-    "mongoose": "^8.9.6",
-    "morgan": "^1.10.0",
-    "nodemailer": "^6.10.0"
+    "axios": "^1.7.9",
+    "cra-template": "1.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.29.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.2.4"
   },
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.23",
-    "nodemon": "^3.1.9",
-    "postcss": "^8.5.1",
-    "postcss-cli": "^11.0.0",
-    "tailwindcss": "^4.0.3"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
