@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome, <%= user.name %>!</h2>
+
+        <nav>
+            <ul>
+                <li><a href="/roadmaps">My Roadmaps</a></li>
+                <li><a href="/topic">All Topics</a></li>
+                <li><a href="/progress">Track Progress</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+
+        <h3>Your Learning Roadmaps</h3>
+
+        <% if (roadmaps.length > 0) { %>
+            <ul>
+                <% roadmaps.forEach(roadmap => { %>
+                    <li>
+                        <strong><%= roadmap.title %></strong>
+                        <p><%= roadmap.description %></p>
+                        <a href="/roadmap/<%= roadmap._id %>">View Details</a>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No roadmaps yet. <a href="/add-roadmap">Create One</a></p>
+        <% } %>
+    </div>
+</body>
+</html>
